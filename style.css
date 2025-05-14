@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+:root {
+    --border-radious: 99999px;
+    --main-transition: 300ms;
+    --black-color: #000;
+    --white-color: #fff;
+    --ddd-color: #ddd;
+    --eee-color: #eee;
+
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body {
+    background-color: #f6f6f8;
+}
+header {
+    width: 100%;
+    min-height: 60px;
+    position: relative;
+}
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 1px;
+    background-color: var(--ddd-color);
+    z-index: 1;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+header .container .name {
+    color: var(--black-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+header .container .impotentInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+}
+header .container .impotentInfo p {
+    color: var(--black-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+header .container .impotentInfo button {
+    width: 50px;
+    height: 30px;
+    background-color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radious);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+}
+header .container .impotentInfo button span {
+    width: 15px;
+    height: 2px;
+    background-color: var(--black-color);
+    border-radius: var(--border-radious);
+    transition: var(--main-transition);
+}
+header .container .impotentInfo button span:first-child {
+    transform: translateY(-2px);
+}
+header .container .impotentInfo button span:last-child {
+    transform: translateY(2px);
+}
+header .container .impotentInfo button.open span {
+    background-color: #ff2525;
+}
+header .container .impotentInfo button.open span:first-child {
+    transform: translateY(2px) rotate(-45deg);
+}
+header .container .impotentInfo button.open span:last-child {
+    transform: translateY(0px) rotate(45deg);
+}
+header .impotentInfo .cardBox {
+    position: absolute;
+    background-color: var(--white-color);
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    top: 35px;
+    right: -10px;
+    z-index: 2;
+    transition: var(--main-transition);
+    opacity: 0;
+    pointer-events: none;
+}
+header .impotentInfo .cardBox.open {
+    top: 45px;
+    right: -10px;
+    opacity: 1;
+    pointer-events: auto;
+}
+header .impotentInfo .cardBox .item {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+header .impotentInfo .cardBox::after {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -18px;
+    right: 25px;
+}
+header .impotentInfo .cardBox .item:hover {
+    background-color: #f6f6f8;
+}
+header .impotentInfo .cardBox .item:first-child {
+    border-bottom: 1px solid var(--eee-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+header .impotentInfo .cardBox .item:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+header .impotentInfo .cardBox .item i {
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    header .container .impotentInfo p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    header .container .name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+.landing {
+    min-height: calc(100vh - 80px);
+    padding: 80px 0 40px;
+}
+.landing .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.landing .image {
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    outline: 10px solid var(--white-color);
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.landing .image img {
+    width: 100%;
+}
+.landing .text h1 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.landing .text button {
+    width: 150px;
+    height: 35px;
+    border-radius: var(--border-radious);
+    background-color: var(--black-color);
+    border: none;
+    color: var(--white-color);
+    font-weight: 500;
+}
