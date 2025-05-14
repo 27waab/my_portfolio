@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Cairo", sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 :root {
     --border-radious: 99999px;
@@ -13,6 +13,23 @@
     --ddd-color: #ddd;
     --eee-color: #eee;
 
+}
+.main-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    z-index: 4;
+    color: var(--black-color);
+    margin-bottom: 20px;
+}
+.main-heading::after {
+    position: absolute;
+    z-index: -3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
 }
 .container {
     padding-left: 20px;
@@ -158,12 +175,16 @@ header .impotentInfo .cardBox .item:first-child {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+header .impotentInfo .cardBox .item:nth-child(2) {
+    border-bottom: 1px solid var(--eee-color);
+}
 header .impotentInfo .cardBox .item:last-child {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 header .impotentInfo .cardBox .item i {
     margin-left: 10px;
+    font-size: 22px;
 }
 @media (max-width: 767px) {
     header .container .impotentInfo p {
@@ -187,22 +208,36 @@ header .impotentInfo .cardBox .item i {
     text-align: center;
 }
 .landing .image {
-    overflow: hidden;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    outline: 10px solid var(--white-color);
-    border: 1px solid #eee;
+    outline: 5px solid var(--white-color);
+    border: 1px solid #ddd;
     margin-bottom: 20px;
+    position: relative;
 }
 .landing .image img {
     width: 100%;
+    border-radius: 50%;
+}
+.landing .image p {
+    position: absolute;
+    width: 100px;
+    height: fit-content;
+    background-color: var(--white-color);
+    padding: 2px 0;
+    border-radius: var(--border-radious);
+    font-weight: bold;
+    top: 10px;
+    right: -50px;
+    transform: rotate(-10deg);
+    box-shadow: 0 4px 10px 0px #0000001a;
 }
 .landing .text h1 {
     font-size: 35px;
     font-weight: 800;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .landing .text button {
     width: 150px;
@@ -212,4 +247,71 @@ header .impotentInfo .cardBox .item i {
     border: none;
     color: var(--white-color);
     font-weight: 500;
+    cursor: pointer;
+}
+.skills {
+    padding: 60px 0;
+    background-color: var(--white-color);
+}
+.skills .main-heading::after {
+    content: "المهارات";
+    color: var(--eee-color);
+}
+.skills .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.skills .bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.skills .skill {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+    border-radius: var(--border-radious);
+    background-color: #f6f6f8;
+    outline: 2px solid var(--white-color);
+    border: 1px solid #f6f6f8;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .skill i {
+    font-size: 26px;
+}
+.skills .top .skill:first-child i {
+    color: #ff2525;
+}
+.skills .top .skill:nth-child(2) i {
+    color: #0075ff;
+}
+.skills .top .skill:last-child i {
+    color: #ffeb3b;
+}
+.skills .bottom .skill:first-child i{
+    color: #9c27b0;
+}
+.skills .bottom .skill:last-child i{
+    color: #e91e63;
+}
+@media (max-width: 767px) {
+    .skills .skill {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .skills .skill i {
+        font-size: 16px;
+    }
 }
