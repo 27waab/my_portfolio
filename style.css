@@ -211,8 +211,8 @@ header .impotentInfo .cardBox .item i {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    outline: 5px solid var(--white-color);
-    border: 1px solid #ddd;
+    border: 5px solid var(--white-color);
+    outline: 1px solid #ddd;
     margin-bottom: 20px;
     position: relative;
 }
@@ -262,7 +262,7 @@ header .impotentInfo .cardBox .item i {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .skills .bottom {
     margin-top: 20px;
@@ -280,8 +280,8 @@ header .impotentInfo .cardBox .item i {
     padding: 5px 10px;
     border-radius: var(--border-radious);
     background-color: #f6f6f8;
-    outline: 2px solid var(--white-color);
-    border: 1px solid #f6f6f8;
+    border: 2px solid var(--white-color);
+    outline: 1px solid #f6f6f8;
     cursor: pointer;
     user-select: none;
     font-size: 18px;
@@ -310,6 +310,9 @@ header .impotentInfo .cardBox .item i {
         width: 100px;
         height: 40px;
         font-size: 14px;
+    }
+    .skills .bottom .skill {
+        width: 120px;
     }
     .skills .skill i {
         font-size: 16px;
