@@ -139,7 +139,7 @@ header .impotentInfo .cardBox {
     padding: 10px;
     border-radius: 20px;
     top: 35px;
-    right: -10px;
+    right: -140px;
     z-index: 2;
     transition: var(--main-transition);
     opacity: 0;
@@ -147,7 +147,6 @@ header .impotentInfo .cardBox {
 }
 header .impotentInfo .cardBox.open {
     top: 45px;
-    right: -10px;
     opacity: 1;
     pointer-events: auto;
 }
@@ -165,7 +164,7 @@ header .impotentInfo .cardBox::after {
     border: 10px solid;
     border-color: transparent transparent var(--white-color) transparent;
     top: -18px;
-    right: 25px;
+    left: 25px;
 }
 header .impotentInfo .cardBox .item:hover {
     background-color: #f6f6f8;
