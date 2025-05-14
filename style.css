@@ -187,11 +187,11 @@ header .impotentInfo .cardBox .item i {
 }
 @media (max-width: 767px) {
     header .container .impotentInfo p {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
     }
     header .container .name {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
     }
 }
