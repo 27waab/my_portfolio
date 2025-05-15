@@ -14,6 +14,9 @@
     --eee-color: #eee;
 
 }
+a {
+    text-decoration: none;
+}
 .main-heading {
     text-align: center;
     font-size: 30px;
@@ -60,7 +63,7 @@ body {
 }
 header {
     width: 100%;
-    min-height: 60px;
+    min-height: 50px;
     position: relative;
 }
 header::after {
@@ -102,13 +105,21 @@ header .container .impotentInfo button {
     background-color: var(--white-color);
     border: none;
     border-radius: var(--border-radious);
-    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
     cursor: pointer;
+}
+header .container .impotentInfo button.lang {
+    width: 100px;
+    flex-direction: row;
+    font-size: 14px;
+    margin-left: 10px;
+}
+header .container .impotentInfo button.lang i {
+    margin-left: 5px;
 }
 header .container .impotentInfo button span {
     width: 15px;
@@ -139,7 +150,7 @@ header .impotentInfo .cardBox {
     padding: 10px;
     border-radius: 20px;
     top: 35px;
-    right: -140px;
+    right: -30px;
     z-index: 2;
     transition: var(--main-transition);
     opacity: 0;
@@ -150,7 +161,11 @@ header .impotentInfo .cardBox.open {
     opacity: 1;
     pointer-events: auto;
 }
-header .impotentInfo .cardBox .item {
+header .impotentInfo .cardBox a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+header .impotentInfo .cardBox a .item {
     width: 100%;
     display: flex;
     padding: 10px;
@@ -169,15 +184,12 @@ header .impotentInfo .cardBox::after {
 header .impotentInfo .cardBox .item:hover {
     background-color: #f6f6f8;
 }
-header .impotentInfo .cardBox .item:first-child {
+header .impotentInfo .cardBox a:first-child .item {
     border-bottom: 1px solid var(--eee-color);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-header .impotentInfo .cardBox .item:nth-child(2) {
-    border-bottom: 1px solid var(--eee-color);
-}
-header .impotentInfo .cardBox .item:last-child {
+header .impotentInfo .cardBox a:last-child .item {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -191,13 +203,13 @@ header .impotentInfo .cardBox .item i {
         font-weight: 500;
     }
     header .container .name {
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 800;
     }
 }
 .landing {
-    min-height: calc(100vh - 80px);
-    padding: 80px 0 40px;
+    min-height: calc(100vh - 50px);
+    padding: 50px 0 40px;
 }
 .landing .container {
     display: flex;
@@ -236,7 +248,13 @@ header .impotentInfo .cardBox .item i {
     font-size: 35px;
     font-weight: 800;
     line-height: 1.4;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+.landing .text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 .landing .text button {
     width: 150px;
@@ -367,6 +385,7 @@ header .impotentInfo .cardBox .item i {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
 }
 .porjects .box {
     padding: 20px;
@@ -376,12 +395,11 @@ header .impotentInfo .cardBox .item i {
     outline: 1px solid #f6f6f8;
 }
 .porjects .box .image {
-    width: 250px;
-    border-radius: 25px;
-    overflow: hidden;
+    width: 270px;
 }
 .porjects .box .image img {
     width: 100%;
+    border-radius: 20px;
 }
 .porjects .box .text {
     margin-top: 10px;
@@ -416,4 +434,48 @@ header .impotentInfo .cardBox .item i {
     .porjects .box {
         margin-top: 20px;
     }
+}
+.contact {
+    padding: 80px 0 40px;
+}
+.contact .main-heading::after {
+    content: "تواصل معي";
+    color: var(--white-color);
+}
+.contact h4 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.contact .buttons {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact button {
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: var(--border-radious);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--white-color);
+}
+.contact button i {
+    margin-left: 10px;
+    font-size: 22px;
+}
+.contact a:first-child button {
+    background-color: #ff2525;
+    margin-left: 5px;
+}
+.contact a:last-child button {
+    background-color: #4caf50;
+        margin-right: 5px;
 }
