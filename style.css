@@ -187,11 +187,11 @@ header .impotentInfo .cardBox .item i {
 }
 @media (max-width: 767px) {
     header .container .impotentInfo p {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
     }
     header .container .name {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
     }
 }
@@ -408,4 +408,12 @@ header .impotentInfo .cardBox .item i {
 .porjects .box .text button i {
     font-size: 22px;
     margin-left: 10px;
+}
+@media (max-width: 767px) {
+    .porjects .container {
+        flex-direction: column;
+    }
+    .porjects .box {
+        margin-top: 20px;
+    }
 }
